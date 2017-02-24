@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 class FirstViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+
+    let url = URL(string: "https://gbfs.citibikenyc.com/gbfs/en/station_information.json")
+    Feed(url: url).fetch { (stations) in
+      stations.forEach { station in
+        self.setupMKMapView()
+      }
+    }
   }
 
   override func didReceiveMemoryWarning() {
@@ -20,6 +28,15 @@ class FirstViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  func setupMKMapView() -> Void {
+    let mapView = MKMapView()
+    mapView.isZoomEnabled = true
+    mapView.isScrollEnabled = true
+    mapView.isPitchEnabled = true
+    mapView.isRotateEnabled = true
+    self.view.addSubview(mapView)
+    mapView.frame = self.view.bounds
+  }
 
 }
 
