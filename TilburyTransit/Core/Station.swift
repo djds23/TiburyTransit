@@ -7,15 +7,25 @@
 //
 
 import Foundation
+import CoreLocation
 
+protocol Locateable {
+  var latitude: Double { get }
+  var longitude: Double { get }
+  func toCLLocationCoordinate2D () -> CLLocationCoordinate2D
+}
 
-struct Station {
+struct Station: Locateable {
+  public func toCLLocationCoordinate2D() -> CLLocationCoordinate2D {
+    return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
+  }
+
 
   let name: String
-  let latitude: Float
-  let longitude: Float
+  let latitude: Double
+  let longitude: Double
 
-  public init(name: String, latitude: Float, longitude: Float) {
+  public init(name: String, latitude: Double, longitude: Double) {
     self.name = name
     self.latitude = latitude
     self.longitude = longitude

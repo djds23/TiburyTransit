@@ -10,17 +10,30 @@ import UIKit
 import MapKit
 
 class FirstViewController: UIViewController {
-
+  var coordinateRegion: MKCoordinateRegion?
+  
+  var mapView: MKMapView?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
 
+    // this stuff should be moved to the body that instantiates it
     let url = URL(string: "https://gbfs.citibikenyc.com/gbfs/en/station_information.json")
     Feed(url: url).fetch { (stations) in
-      stations.forEach { station in
-        self.setupMKMapView()
+      self.setupMKMapView()
+      if let lastStation = stations.last {
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        self.coordinateRegion = MKCoordinateRegion(center: lastStation.toCLLocationCoordinate2D(), span: span)
+        let point = MKPointAnnotation()
+        point.coordinate = lastStation.toCLLocationCoordinate2D()
+        point.title = lastStation.name
+        self.mapView?.addAnnotation(point)
+        self.mapView?.setRegion(self.coordinateRegion!, animated: true)
+        self.mapView?.regionThatFits(self.coordinateRegion!)
       }
+      
     }
+    
   }
 
   override func didReceiveMemoryWarning() {
@@ -36,6 +49,7 @@ class FirstViewController: UIViewController {
     mapView.isRotateEnabled = true
     self.view.addSubview(mapView)
     mapView.frame = self.view.bounds
+    self.mapView = mapView
   }
 
 }

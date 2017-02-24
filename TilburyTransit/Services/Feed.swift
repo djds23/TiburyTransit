@@ -29,7 +29,7 @@ class Feed {
         guard let unwrappedStations = rawStations else { return }
       
         let stations = unwrappedStations.map({ station in
-          Station(name: station["name"] as! String, latitude: station["lat"] as! Float, longitude: station["lon"]as! Float)
+          Station(name: station["name"] as! String, latitude: station["lat"] as! Double, longitude: station["lon"]as! Double)
         })
         
         DispatchQueue.main.async {
