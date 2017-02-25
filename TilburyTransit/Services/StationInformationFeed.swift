@@ -16,7 +16,7 @@ class StationInformationFeed: StationFeed {
           name: station["name"] as! String,
           latitude: station["lat"] as! Double,
           longitude: station["lon"]as! Double,
-          stationID: station["station_id"] as! Int
+          stationID: station["station_id"] as! String
         )
       })
       

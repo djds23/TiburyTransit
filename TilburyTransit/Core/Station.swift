@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 protocol InformedStation {
-  var stationID: Int { get }
+  var stationID: String { get }
   var name: String { get }
   var latitude: Double { get }
   var longitude: Double { get }
@@ -37,7 +37,7 @@ struct Station: StationAvailability, InformedStation {
     return self.stationStatus.isAvailble()
   }
 
-  var stationID: Int { get {
+  var stationID: String { get {
     return self.stationInformation.stationID
     }
   }
@@ -72,7 +72,7 @@ struct Station: StationAvailability, InformedStation {
 }
 
 struct StationStatus: StationAvailability {
-  let stationID: Int
+  let stationID: String
   let bikesAvailable: Int
   let bikesDisabled: Int
   let docksAvailable: Int
@@ -92,12 +92,12 @@ struct StationStatus: StationAvailability {
 
 struct StationInformation: InformedStation {
 
-  let stationID: Int
+  let stationID: String
   let name: String
   let latitude: Double
   let longitude: Double
 
-  public init(name: String, latitude: Double, longitude: Double, stationID: Int) {
+  public init(name: String, latitude: Double, longitude: Double, stationID: String) {
     self.name = name
     self.latitude = latitude
     self.longitude = longitude

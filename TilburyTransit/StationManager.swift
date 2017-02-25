@@ -20,8 +20,8 @@ protocol StationDataManagerDelegate: class {
 class StationManager: NSObject, StationDataManager {
   
   internal var stations: [Station] = []
-  private var stationInformationByStationID: Dictionary<Int, StationInformation> = [:]
-  private var stationStatusByStationID: Dictionary<Int, StationStatus> = [:]
+  private var stationInformationByStationID: Dictionary<String, StationInformation> = [:]
+  private var stationStatusByStationID: Dictionary<String, StationStatus> = [:]
   weak var delegate: StationDataManagerDelegate?
   
   internal func reloadStations() {

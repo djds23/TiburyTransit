@@ -15,7 +15,6 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
   var locationManager = CLLocationManager()
   var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
-  var stationPoints: NSMutableOrderedSet = NSMutableOrderedSet()
   var stationManager = StationManager()
   
   override func viewDidLoad() {

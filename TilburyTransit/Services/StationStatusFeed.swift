@@ -13,7 +13,7 @@ class StationStatusFeed: StationFeed {
     self.getDataFromFeed { (rawStations) in
       let stations = rawStations.map({ station in
         StationStatus(
-          stationID: Int(station["station_id"] as! String)!,
+          stationID: station["station_id"] as! String,
           bikesAvailable: station["num_bikes_available"] as! Int,
           bikesDisabled: station["num_bikes_disabled"] as! Int,
           docksAvailable: station["num_docks_available"] as! Int,
