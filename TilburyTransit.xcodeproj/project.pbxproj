@@ -18,13 +18,15 @@
 		7B0971251E5FF911007EF3AC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971241E5FF911007EF3AC /* Station.swift */; };
 		7B0971261E5FF911007EF3AC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971241E5FF911007EF3AC /* Station.swift */; };
 		7B0971271E5FF911007EF3AC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971241E5FF911007EF3AC /* Station.swift */; };
-		7B09712A1E5FF978007EF3AC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* Feed.swift */; };
-		7B09712B1E5FF978007EF3AC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* Feed.swift */; };
-		7B09712C1E5FF978007EF3AC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* Feed.swift */; };
+		7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */; };
+		7B09712B1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */; };
+		7B09712C1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */; };
 		7B09712E1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
-		7B2774DF1E6209C700575F29 /* StationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationDataManager.swift */; };
+		7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationManager.swift */; };
+		7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */; };
+		7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762471E62192700DA2DB8 /* StationFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +62,11 @@
 		7B0971161E5FF589007EF3AC /* TilburyTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilburyTransitUITests.swift; sourceTree = "<group>"; };
 		7B0971181E5FF589007EF3AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B0971241E5FF911007EF3AC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Station.swift; path = Core/Station.swift; sourceTree = "<group>"; };
-		7B0971291E5FF978007EF3AC /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = Services/Feed.swift; sourceTree = "<group>"; };
+		7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationInformationFeed.swift; path = Services/StationInformationFeed.swift; sourceTree = "<group>"; };
 		7B09712D1E5FFA9A007EF3AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		7B2774DE1E6209C700575F29 /* StationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDataManager.swift; sourceTree = "<group>"; };
+		7B2774DE1E6209C700575F29 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
+		7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationStatusFeed.swift; path = Services/StationStatusFeed.swift; sourceTree = "<group>"; };
+		7BB762471E62192700DA2DB8 /* StationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationFeed.swift; path = Services/StationFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				7B0971241E5FF911007EF3AC /* Station.swift */,
-				7B0971291E5FF978007EF3AC /* Feed.swift */,
+				7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */,
+				7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */,
+				7BB762471E62192700DA2DB8 /* StationFeed.swift */,
 				7B09712D1E5FFA9A007EF3AC /* APIClient.swift */,
-				7B2774DE1E6209C700575F29 /* StationDataManager.swift */,
+				7B2774DE1E6209C700575F29 /* StationManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -292,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */,
-				7B2774DF1E6209C700575F29 /* StationDataManager.swift in Sources */,
-				7B09712A1E5FF978007EF3AC /* Feed.swift in Sources */,
+				7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */,
+				7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
+				7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
+				7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */,
 				7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */,
 				7B0970F71E5FF589007EF3AC /* FirstViewController.swift in Sources */,
 				7B09712E1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
@@ -306,7 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B09710C1E5FF589007EF3AC /* TilburyTransitTests.swift in Sources */,
-				7B09712B1E5FF978007EF3AC /* Feed.swift in Sources */,
+				7B09712B1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 			);
@@ -317,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0971171E5FF589007EF3AC /* TilburyTransitUITests.swift in Sources */,
-				7B09712C1E5FF978007EF3AC /* Feed.swift in Sources */,
+				7B09712C1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 			);

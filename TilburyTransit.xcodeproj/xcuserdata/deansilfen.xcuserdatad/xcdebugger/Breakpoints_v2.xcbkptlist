@@ -2,4 +2,150 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TilburyTransit/FirstViewController.swift"
+            timestampString = "509748269.80546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "stationsWereUpdated(stations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TilburyTransit/StationManager.swift"
+            timestampString = "509748452.361912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "attemptToMergeStationInformationAndStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TilburyTransit/StationManager.swift"
+            timestampString = "509748452.361912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "attemptToMergeStationInformationAndStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TilburyTransit/StationManager.swift"
+            timestampString = "509748452.361912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "updateStationInformation(stationInformations:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TilburyTransit.StationManager.(updateStationInformation in _2EE541D69304AE313E0B0EA816831F07) (stationInformations : Swift.Array&lt;TilburyTransit.StationInformation&gt;) -&gt; ()"
+                  moduleName = "TilburyTransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deansilfen/Projects/TilburyTransit/TilburyTransit/StationManager.swift"
+                  timestampString = "509748453.500696"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TilburyTransit.StationManager.((updateStationInformation in _2EE541D69304AE313E0B0EA816831F07) (stationInformations : Swift.Array&lt;TilburyTransit.StationInformation&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "TilburyTransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deansilfen/Projects/TilburyTransit/TilburyTransit/StationManager.swift"
+                  timestampString = "509748453.502255"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TilburyTransit/StationManager.swift"
+            timestampString = "509748452.361912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "updateStationStatus(stationStatuses:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TilburyTransit.StationManager.(updateStationStatus in _2EE541D69304AE313E0B0EA816831F07) (stationStatuses : Swift.Array&lt;TilburyTransit.StationStatus&gt;) -&gt; ()"
+                  moduleName = "TilburyTransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deansilfen/Projects/TilburyTransit/TilburyTransit/StationManager.swift"
+                  timestampString = "509748453.523383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TilburyTransit.StationManager.((updateStationStatus in _2EE541D69304AE313E0B0EA816831F07) (stationStatuses : Swift.Array&lt;TilburyTransit.StationStatus&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "TilburyTransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/deansilfen/Projects/TilburyTransit/TilburyTransit/StationManager.swift"
+                  timestampString = "509748453.525986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "101">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

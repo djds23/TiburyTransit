@@ -28,6 +28,11 @@ struct Station: StationAvailability, InformedStation {
   private let stationInformation: StationInformation
   private let stationStatus: StationStatus
   
+  public init(stationInformation: StationInformation, stationStatus: StationStatus) {
+    self.stationInformation = stationInformation
+    self.stationStatus = stationStatus
+  }
+  
   func isAvailble() -> Bool {
     return self.stationStatus.isAvailble()
   }
@@ -64,19 +69,24 @@ struct Station: StationAvailability, InformedStation {
     return self.stationStatus.docksDisabled
     }
   }
-
-  
-  
 }
 
 struct StationStatus: StationAvailability {
+  let stationID: Int
   let bikesAvailable: Int
   let bikesDisabled: Int
   let docksAvailable: Int
   let docksDisabled: Int
 
+  let renting: Int
+  let returning: Int
+  let installed: Int
+  
   func isAvailble() -> Bool {
-    <#code#>
+    guard self.renting == 1 else { return false }
+    guard self.returning == 1 else { return false }
+    guard self.installed == 1 else { return false }
+    return true
   }
 }
 
@@ -92,9 +102,5 @@ struct StationInformation: InformedStation {
     self.latitude = latitude
     self.longitude = longitude
     self.stationID = stationID
-  }
-  
-  public func toCLLocationCoordinate2D() -> CLLocationCoordinate2D {
-    return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
   }
 }

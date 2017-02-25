@@ -24,7 +24,6 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
     self.stationManager.reloadStations()
     self.setupMKMapView()
     self.locationManager.requestWhenInUseAuthorization()
-    
   }
   
   func stationsWereUpdated(stations: [Station]) {
@@ -53,9 +52,16 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
   }
   
   func stationsUpdated(stations: [Station]) -> Void {
-    stations.forEach { (station) in
-      self.addPointToMapView(station: station)
+    let annotations = stations.map { (station) -> MKPointAnnotation in
+      let point = MKPointAnnotation()
+      point.coordinate = CLLocationCoordinate2D(
+        latitude: station.latitude,
+        longitude: station.longitude
+      )
+      point.title = station.name
+      return point
     }
+    self.mapView?.addAnnotations(annotations)
     self.updateMapCenter()
   }
   
@@ -83,13 +89,6 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
       latitude: 40.7480,
       longitude: 40.7480
     )
-  }
-  
-  func addPointToMapView(station: Station) -> Void {
-    let point = MKPointAnnotation()
-    point.coordinate = station.toCLLocationCoordinate2D()
-    point.title = station.name
-    self.mapView?.addAnnotation(point)
   }
 }
 
