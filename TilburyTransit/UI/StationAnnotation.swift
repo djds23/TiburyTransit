@@ -11,7 +11,7 @@ import MapKit
 
 class StationAnnotation: NSObject, MKAnnotation {
   
-  private var station: Station
+  var station: Station
   
   public init(station: Station) {
     self.station = station

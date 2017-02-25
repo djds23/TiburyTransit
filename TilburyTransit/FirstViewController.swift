@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class FirstViewController: UIViewController, StationDataManagerDelegate {
+class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapViewDelegate {
   
+  let annotationViewIdentifier = "StationAnnotationView"
   var locationManager = CLLocationManager()
   var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
@@ -27,6 +28,23 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
   
   func stationsWereUpdated(stations: [Station]) {
     self.stationsUpdated(stations: stations)
+  }
+  
+  public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    guard let stationAnnotation = annotation as? StationAnnotation else {
+      return nil as MKAnnotationView?
+    }
+    
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier:self.annotationViewIdentifier) as? StationAnnotationView
+  
+    if annotationView == nil {
+      annotationView = StationAnnotationView(annotation:stationAnnotation, reuseIdentifier: self.annotationViewIdentifier)
+    }
+    
+    if !stationAnnotation.station.isAvailble() {
+      annotationView?.pinTintColor = StationAnnotationView.purplePinColor()
+    }
+    return annotationView
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -48,10 +66,10 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
     self.view.addSubview(mapView)
     mapView.frame = self.view.bounds
     self.mapView = mapView
+    self.mapView?.delegate = self
   }
   
   func stationsUpdated(stations: [Station]) -> Void {
-//    let reuseIdentifier = "StationAnnotationView"
     let annotations = stations.map { (station) -> StationAnnotation in
       let annotation = StationAnnotation(station: station)
       return annotation

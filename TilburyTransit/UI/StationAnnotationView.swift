@@ -9,13 +9,6 @@
 import UIKit
 import MapKit
 
-class StationAnnotationView: MKAnnotationView {
+class StationAnnotationView: MKPinAnnotationView {
 
-  public init(station: Station, reuseIdentifier: String?) {
-    super.init(annotation: StationAnnotation(station: station), reuseIdentifier: reuseIdentifier)
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder:aDecoder)
-  }
 }
