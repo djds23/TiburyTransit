@@ -8,32 +8,32 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class FirstViewController: UIViewController {
-  var coordinateRegion: MKCoordinateRegion?
+class FirstViewController: UIViewController, StationDataManagerDelegate {
   
+  var locationManager = CLLocationManager()
+  var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
+  var stationPoints: NSMutableOrderedSet = NSMutableOrderedSet()
+  var stationManager = StationManager()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    // this stuff should be moved to the body that instantiates it
-    let url = URL(string: "https://gbfs.citibikenyc.com/gbfs/en/station_information.json")
-    Feed(url: url).fetch { (stations) in
-      self.setupMKMapView()
-      if let lastStation = stations.last {
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        self.coordinateRegion = MKCoordinateRegion(center: lastStation.toCLLocationCoordinate2D(), span: span)
-        let point = MKPointAnnotation()
-        point.coordinate = lastStation.toCLLocationCoordinate2D()
-        point.title = lastStation.name
-        self.mapView?.addAnnotation(point)
-        self.mapView?.setRegion(self.coordinateRegion!, animated: true)
-        self.mapView?.regionThatFits(self.coordinateRegion!)
-      }
-      
-    }
+    self.stationManager.delegate = self
+    self.stationManager.reloadStations()
+    self.setupMKMapView()
+    self.locationManager.requestWhenInUseAuthorization()
     
+  }
+  
+  func stationsWereUpdated(stations: [Station]) {
+    self.stationsUpdated(stations: stations)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.updateMapCenter()
   }
 
   override func didReceiveMemoryWarning() {
@@ -51,6 +51,45 @@ class FirstViewController: UIViewController {
     mapView.frame = self.view.bounds
     self.mapView = mapView
   }
-
+  
+  func stationsUpdated(stations: [Station]) -> Void {
+    stations.forEach { (station) in
+      self.addPointToMapView(station: station)
+    }
+    self.updateMapCenter()
+  }
+  
+  func updateMapCenter() -> Void {
+    let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    let centerCoordinate = self.currentLocationCoordinate() ?? self.empireStateBuildingCoordinate()
+    self.coordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
+    self.mapView?.setRegion(self.coordinateRegion!, animated: true)
+    self.mapView?.regionThatFits(self.coordinateRegion!)
+  }
+  
+  func currentLocationCoordinate() -> CLLocationCoordinate2D? {
+    if let coordinates = self.locationManager.location?.coordinate {
+      return CLLocationCoordinate2D(
+        latitude: coordinates.latitude,
+        longitude: coordinates.longitude
+      )
+    } else {
+      return nil as CLLocationCoordinate2D?
+    }
+  }
+  
+  func empireStateBuildingCoordinate() -> CLLocationCoordinate2D {
+    return CLLocationCoordinate2D(
+      latitude: 40.7480,
+      longitude: 40.7480
+    )
+  }
+  
+  func addPointToMapView(station: Station) -> Void {
+    let point = MKPointAnnotation()
+    point.coordinate = station.toCLLocationCoordinate2D()
+    point.title = station.name
+    self.mapView?.addAnnotation(point)
+  }
 }
 

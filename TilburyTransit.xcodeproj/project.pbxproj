@@ -24,6 +24,7 @@
 		7B09712E1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
+		7B2774DF1E6209C700575F29 /* StationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7B0971241E5FF911007EF3AC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Station.swift; path = Core/Station.swift; sourceTree = "<group>"; };
 		7B0971291E5FF978007EF3AC /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = Services/Feed.swift; sourceTree = "<group>"; };
 		7B09712D1E5FFA9A007EF3AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7B2774DE1E6209C700575F29 /* StationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				7B0971241E5FF911007EF3AC /* Station.swift */,
 				7B0971291E5FF978007EF3AC /* Feed.swift */,
 				7B09712D1E5FFA9A007EF3AC /* APIClient.swift */,
+				7B2774DE1E6209C700575F29 /* StationDataManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */,
+				7B2774DF1E6209C700575F29 /* StationDataManager.swift in Sources */,
 				7B09712A1E5FF978007EF3AC /* Feed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
 				7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */,
@@ -550,6 +554,7 @@
 				7B09711D1E5FF589007EF3AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B09711E1E5FF589007EF3AC /* Build configuration list for PBXNativeTarget "TilburyTransitTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +563,7 @@
 				7B0971201E5FF589007EF3AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B0971211E5FF589007EF3AC /* Build configuration list for PBXNativeTarget "TilburyTransitUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +572,7 @@
 				7B0971231E5FF589007EF3AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

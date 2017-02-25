@@ -14,7 +14,8 @@ class Feed {
   public init (url:URL?) {
     self.url = url
   }
-  public func fetch(completion: @escaping (Array<Station>) -> Void) -> Void {
+  
+  public func fetch(completion: @escaping (Array<StationInformation>) -> Void) -> Void {
     guard let unwrappedUrl = self.url else { return }
     let client = APIClient()
     
@@ -29,7 +30,12 @@ class Feed {
         guard let unwrappedStations = rawStations else { return }
       
         let stations = unwrappedStations.map({ station in
-          Station(name: station["name"] as! String, latitude: station["lat"] as! Double, longitude: station["lon"]as! Double)
+          StationInformation(
+            name: station["name"] as! String,
+            latitude: station["lat"] as! Double,
+            longitude: station["lon"]as! Double,
+            stationID: station["station_id"] as! Int
+          )
         })
         
         DispatchQueue.main.async {
