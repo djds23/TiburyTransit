@@ -51,14 +51,10 @@ class FirstViewController: UIViewController, StationDataManagerDelegate {
   }
   
   func stationsUpdated(stations: [Station]) -> Void {
-    let annotations = stations.map { (station) -> MKPointAnnotation in
-      let point = MKPointAnnotation()
-      point.coordinate = CLLocationCoordinate2D(
-        latitude: station.latitude,
-        longitude: station.longitude
-      )
-      point.title = station.name
-      return point
+//    let reuseIdentifier = "StationAnnotationView"
+    let annotations = stations.map { (station) -> StationAnnotation in
+      let annotation = StationAnnotation(station: station)
+      return annotation
     }
     self.mapView?.addAnnotations(annotations)
     self.updateMapCenter()

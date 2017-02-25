@@ -27,6 +27,12 @@
 		7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationManager.swift */; };
 		7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */; };
 		7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762471E62192700DA2DB8 /* StationFeed.swift */; };
+		7BB7624A1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */; };
+		7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */; };
+		7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */; };
+		7BB7624F1E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */; };
+		7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */; };
+		7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,8 @@
 		7B2774DE1E6209C700575F29 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationStatusFeed.swift; path = Services/StationStatusFeed.swift; sourceTree = "<group>"; };
 		7BB762471E62192700DA2DB8 /* StationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationFeed.swift; path = Services/StationFeed.swift; sourceTree = "<group>"; };
+		7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotation.swift; path = UI/StationAnnotation.swift; sourceTree = "<group>"; };
+		7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotationView.swift; path = UI/StationAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 				7B0970F41E5FF589007EF3AC /* AppDelegate.swift */,
 				7B0970F61E5FF589007EF3AC /* FirstViewController.swift */,
 				7B0970F81E5FF589007EF3AC /* SecondViewController.swift */,
+				7BB7624D1E62283400DA2DB8 /* UI */,
 				7B0970FA1E5FF589007EF3AC /* Main.storyboard */,
 				7B0970FD1E5FF589007EF3AC /* Assets.xcassets */,
 				7B0970FF1E5FF589007EF3AC /* LaunchScreen.storyboard */,
@@ -158,6 +167,15 @@
 				7B2774DE1E6209C700575F29 /* StationManager.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		7BB7624D1E62283400DA2DB8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */,
+				7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +318,8 @@
 				7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */,
 				7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */,
 				7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
+				7BB7624A1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BB7624F1E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */,
@@ -315,7 +335,9 @@
 			files = (
 				7B09710C1E5FF589007EF3AC /* TilburyTransitTests.swift in Sources */,
 				7B09712B1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
+				7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
+				7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +348,9 @@
 			files = (
 				7B0971171E5FF589007EF3AC /* TilburyTransitUITests.swift in Sources */,
 				7B09712C1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
+				7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
+				7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
