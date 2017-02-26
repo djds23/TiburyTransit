@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F41E5FF589007EF3AC /* AppDelegate.swift */; };
-		7B0970F71E5FF589007EF3AC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F61E5FF589007EF3AC /* FirstViewController.swift */; };
+		7B0970F71E5FF589007EF3AC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F61E5FF589007EF3AC /* SplashViewController.swift */; };
 		7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F81E5FF589007EF3AC /* SecondViewController.swift */; };
 		7B0970FC1E5FF589007EF3AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0970FA1E5FF589007EF3AC /* Main.storyboard */; };
 		7B0970FE1E5FF589007EF3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0970FD1E5FF589007EF3AC /* Assets.xcassets */; };
@@ -34,6 +34,9 @@
 		7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */; };
 		7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */; };
 		7BB762581E63369900DA2DB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB762571E63369900DA2DB8 /* MapKit.framework */; };
+		7BB7625E1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
+		7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
+		7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,7 @@
 /* Begin PBXFileReference section */
 		7B0970F11E5FF589007EF3AC /* TilburyTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TilburyTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0970F41E5FF589007EF3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B0970F61E5FF589007EF3AC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		7B0970F61E5FF589007EF3AC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7B0970F81E5FF589007EF3AC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7B0970FB1E5FF589007EF3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B0970FD1E5FF589007EF3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotation.swift; path = UI/StationAnnotation.swift; sourceTree = "<group>"; };
 		7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotationView.swift; path = UI/StationAnnotationView.swift; sourceTree = "<group>"; };
 		7BB762571E63369900DA2DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7BB7625D1E63835300DA2DB8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = UI/MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0970F41E5FF589007EF3AC /* AppDelegate.swift */,
-				7B0970F61E5FF589007EF3AC /* FirstViewController.swift */,
+				7B0970F61E5FF589007EF3AC /* SplashViewController.swift */,
 				7B0970F81E5FF589007EF3AC /* SecondViewController.swift */,
 				7BB7624D1E62283400DA2DB8 /* UI */,
 				7B0970FA1E5FF589007EF3AC /* Main.storyboard */,
@@ -178,6 +182,7 @@
 			children = (
 				7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */,
 				7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */,
+				7BB7625D1E63835300DA2DB8 /* MapViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -339,9 +344,10 @@
 				7BB7624F1E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
+				7BB7625E1E63835300DA2DB8 /* MapViewController.swift in Sources */,
 				7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */,
 				7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */,
-				7B0970F71E5FF589007EF3AC /* FirstViewController.swift in Sources */,
+				7B0970F71E5FF589007EF3AC /* SplashViewController.swift in Sources */,
 				7B09712E1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +362,7 @@
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
+				7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +376,7 @@
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,
+				7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

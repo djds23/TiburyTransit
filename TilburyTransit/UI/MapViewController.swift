@@ -1,8 +1,8 @@
 //
-//  FirstViewController.swift
+//  MapViewController.swift
 //  TilburyTransit
 //
-//  Created by Dean Silfen on 2/24/17.
+//  Created by Dean Silfen on 2/26/17.
 //  Copyright © 2017 Dean Silfen. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, StationDataManagerDelegate, MKMapViewDelegate, UISearchResultsUpdating {
   
   let annotationViewIdentifier = "StationAnnotationView"
   var locationManager = CLLocationManager()
@@ -21,7 +21,7 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
   override func viewDidLoad() {
     super.viewDidLoad()
     self.stationManager.delegate = self
-    self.stationManager.reloadStations()
+//    self.stationManager.reloadStations()
     self.setupMKMapView()
     self.locationManager.requestWhenInUseAuthorization()
   }
@@ -36,7 +36,7 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
     }
     
     var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier:self.annotationViewIdentifier) as? StationAnnotationView
-  
+    
     if annotationView == nil {
       annotationView = StationAnnotationView(annotation:stationAnnotation, reuseIdentifier: self.annotationViewIdentifier)
     }
@@ -44,7 +44,7 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
     if !stationAnnotation.station.isAvailble() {
       annotationView?.pinTintColor = StationAnnotationView.purplePinColor()
     }
-
+    
     annotationView?.canShowCallout = true
     return annotationView
   }
@@ -52,17 +52,17 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
   public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
     print("view was selected")
   }
-
+  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     self.updateMapCenter()
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   func setupMKMapView() -> Void {
     let mapView = MKMapView()
     mapView.isZoomEnabled = true
@@ -84,9 +84,13 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
     self.updateMapCenter()
   }
   
+  public func updateSearchResults(for searchController: UISearchController) {
+    
+  }
+
   func updateMapCenter() -> Void {
     let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-    let centerCoordinate = self.currentLocationCoordinate() ?? self.empireStateBuildingCoordinate()
+    let centerCoordinate = self.currentLocationCoordinate() ?? self.defaultCoordinate()
     self.coordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
     self.mapView?.setRegion(self.coordinateRegion!, animated: true)
     self.mapView?.regionThatFits(self.coordinateRegion!)
@@ -103,11 +107,10 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
     }
   }
   
-  func empireStateBuildingCoordinate() -> CLLocationCoordinate2D {
+  func defaultCoordinate() -> CLLocationCoordinate2D {
     return CLLocationCoordinate2D(
       latitude: 40.7480,
       longitude: 40.7480
     )
   }
 }
-
