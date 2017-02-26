@@ -12,13 +12,8 @@ class SplashViewController: UINavigationController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let resultsController = MapViewController()
-    let searchController = UISearchController(searchResultsController: resultsController)
-    searchController.searchResultsUpdater = resultsController
-    searchController.searchBar.placeholder = NSLocalizedString("Enter keyword (e.g. iceland)", comment: "")
-    let searchContainer = UISearchContainerViewController(searchController: searchController)
-    searchContainer.title = NSLocalizedString("Search for a station", comment: "")
-    self.pushViewController(searchContainer, animated: true)
+    let searchController = AddressSearchViewController()
+    self.pushViewController(searchController, animated: true)
   }
   
 }

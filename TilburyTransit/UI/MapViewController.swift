@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, StationDataManagerDelegate, MKMapViewDelegate, UISearchResultsUpdating {
+class MapViewController: UIViewController, StationDataManagerDelegate, MKMapViewDelegate {
   
   let annotationViewIdentifier = "StationAnnotationView"
   var locationManager = CLLocationManager()

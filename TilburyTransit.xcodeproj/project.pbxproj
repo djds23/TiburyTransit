@@ -37,6 +37,9 @@
 		7BB7625E1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
 		7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
 		7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
+		7BF18B5B1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
+		7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
+		7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,7 @@
 		7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotationView.swift; path = UI/StationAnnotationView.swift; sourceTree = "<group>"; };
 		7BB762571E63369900DA2DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7BB7625D1E63835300DA2DB8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = UI/MapViewController.swift; sourceTree = "<group>"; };
+		7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressSearchViewController.swift; path = UI/AddressSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 				7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */,
 				7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */,
 				7BB7625D1E63835300DA2DB8 /* MapViewController.swift */,
+				7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */,
 				7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7BB7624A1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BF18B5B1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7BB7624F1E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
@@ -361,6 +367,7 @@
 				7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 				7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */,
 			);
@@ -375,6 +382,7 @@
 				7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 				7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */,
 			);
