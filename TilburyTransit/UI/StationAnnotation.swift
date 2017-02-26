@@ -37,7 +37,13 @@ class StationAnnotation: NSObject, MKAnnotation {
   
   var subtitle: String? {
     get {
-      return "Bikes: \(self.station.bikesAvailable) | Docks: \(self.station.docksAvailable)"
+      var _subtitle: String
+      if self.station.isAvailble() {
+        _subtitle = "Bikes: \(self.station.bikesAvailable) | Docks: \(self.station.docksAvailable)"
+      } else {
+        _subtitle = "Station Closed"
+      }
+      return _subtitle
     }
   }
 }

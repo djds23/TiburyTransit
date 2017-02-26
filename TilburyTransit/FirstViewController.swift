@@ -44,9 +44,15 @@ class FirstViewController: UIViewController, StationDataManagerDelegate, MKMapVi
     if !stationAnnotation.station.isAvailble() {
       annotationView?.pinTintColor = StationAnnotationView.purplePinColor()
     }
+
+    annotationView?.canShowCallout = true
     return annotationView
   }
   
+  public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    print("view was selected")
+  }
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     self.updateMapCenter()
