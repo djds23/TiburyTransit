@@ -10,26 +10,30 @@ import UIKit
 
 class MapAndAddressViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  var stationManager: StationManager?
+  
+  @IBOutlet weak var mapView: UIView!
+  @IBOutlet weak var addressView: UIView!
+  
+  let mapViewController = MapViewController()
+  let addressSeachViewController = AddressSearchViewController()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.mapViewController.stationManager = self.stationManager
+    self.addressSeachViewController.stationManager = self.stationManager
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    self.addChildViewController(self.mapViewController)
+    self.mapViewController.didMove(toParentViewController: self)
+    self.addChildViewController(self.addressSeachViewController)
+    self.addressSeachViewController.didMove(toParentViewController: self)
+    
+    self.mapView.addSubview(self.mapViewController.view)
+    self.mapViewController.view.frame = self.mapView.bounds
+    
+    self.addressView.addSubview(self.addressSeachViewController.view)
+    self.addressSeachViewController.view.frame = self.addressView.bounds
+    
+    self.navigationItem.title = "Where To?"
+  }
 }

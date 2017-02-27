@@ -154,7 +154,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   func defaultCoordinate() -> CLLocationCoordinate2D {
     return CLLocationCoordinate2D(
       latitude: 40.7480,
-      longitude: 40.7480
+      longitude: -74.0048
     )
   }
 }
