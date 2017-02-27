@@ -45,14 +45,14 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.setupMKMapView()
+    self.locationManager.requestWhenInUseAuthorization()
     self.stationManager?.registerDelegate(delegate: self)
     if let unwrappedManager = self.stationManager {
       if !unwrappedManager.stations.isEmpty {
         self.updateMapViewForStations(stations: unwrappedManager.stations)
       }
     }
-    self.setupMKMapView()
-    self.locationManager.requestWhenInUseAuthorization()
   }
   
   func stationsWereUpdated(stations: [Station]) {
@@ -70,8 +70,12 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
       annotationView = StationAnnotationView(annotation:stationAnnotation, reuseIdentifier: self.annotationViewIdentifier)
     }
     
-    if !stationAnnotation.station.isAvailble() {
-      annotationView?.pinTintColor = StationAnnotationView.purplePinColor()
+    if stationAnnotation.station.readyForPickup() {
+      annotationView?.pinTintColor = UIColor.blue
+    } else if (stationAnnotation.station.isAvailable()) {
+      annotationView?.pinTintColor = UIColor.gray
+    } else {
+      annotationView?.pinTintColor = UIColor.black
     }
     
     annotationView?.canShowCallout = true
@@ -118,11 +122,24 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   }
 
   func updateMapCenter() -> Void {
-    let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
     let centerCoordinate = self.center
     self.coordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
     self.mapView?.setRegion(self.coordinateRegion!, animated: true)
     self.mapView?.regionThatFits(self.coordinateRegion!)
+    self.openSelectedStation()
+  }
+  
+  func openSelectedStation() -> Void {
+    if let selected = self.selectedStation {
+      self.mapView?.annotations.forEach({ (annotation) in
+        if let stationAnnotation = annotation as? StationAnnotation {
+          if (stationAnnotation.station == selected) {
+            self.mapView?.selectAnnotation(stationAnnotation, animated: true)
+          }
+        }
+      })
+    }
   }
   
   func currentLocationCoordinate() -> CLLocationCoordinate2D? {

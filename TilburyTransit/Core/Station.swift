@@ -21,10 +21,10 @@ protocol StationAvailability {
   var bikesDisabled: Int { get }
   var docksAvailable: Int { get }
   var docksDisabled: Int { get }
-  func isAvailble() -> Bool
+  func isAvailable() -> Bool
 }
 
-struct Station: StationAvailability, InformedStation {
+struct Station: StationAvailability, InformedStation, Equatable {
   private let stationInformation: StationInformation
   private let stationStatus: StationStatus
   
@@ -33,8 +33,20 @@ struct Station: StationAvailability, InformedStation {
     self.stationStatus = stationStatus
   }
   
-  func isAvailble() -> Bool {
-    return self.stationStatus.isAvailble()
+  public static func ==(lhs: Station, rhs: Station) -> Bool {
+      return lhs.stationID == rhs.stationID
+  }
+  
+  func readyForPickup() -> Bool {
+    return self.isAvailable() && (self.bikesAvailable > 0)
+  }
+  
+  func readyForDropoff() -> Bool {
+    return self.isAvailable() && (self.docksAvailable > 0)
+  }
+  
+  func isAvailable() -> Bool {
+    return self.stationStatus.isAvailable()
   }
 
   var stationID: String { get {
@@ -82,7 +94,7 @@ struct StationStatus: StationAvailability {
   let returning: Int
   let installed: Int
   
-  func isAvailble() -> Bool {
+  func isAvailable() -> Bool {
     guard self.renting == 1 else { return false }
     guard self.returning == 1 else { return false }
     guard self.installed == 1 else { return false }
