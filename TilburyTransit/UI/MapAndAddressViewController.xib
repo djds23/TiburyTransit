@@ -22,14 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np2-9u-jMQ" userLabel="mapView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="320" id="gKx-RV-gQK"/>
+                        <constraint firstAttribute="height" constant="400" id="gKx-RV-gQK"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFY-8a-5Um" userLabel="addressView">
-                    <rect key="frame" x="0.0" y="320" width="375" height="347"/>
+                    <rect key="frame" x="0.0" y="400" width="375" height="267"/>
                     <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
