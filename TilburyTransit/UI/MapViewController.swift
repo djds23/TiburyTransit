@@ -17,7 +17,17 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
   var stationManager: StationManager?
-  var selectedStation: Station?
+  var selectedStation: Station? {
+    get {
+      return self._selectedStation
+    }
+    set(newStation) {
+      self._selectedStation = newStation
+      self.openSelectedStation()
+    }
+  }
+  
+  private var _selectedStation: Station?
   
   var center: CLLocationCoordinate2D {
     get {

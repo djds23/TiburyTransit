@@ -9,6 +9,10 @@
 import UIKit
 import CoreLocation
 
+protocol AddressSearchViewControllerDelegate: class {
+  func addressSearchViewController(_ addressSearchViewController: AddressSearchViewController, didSelectRowAt indexPath: IndexPath) -> Void
+}
+
 class StationDataSource: NSObject, UITableViewDataSource, StationDataManagerDelegate {
   
   private var stationManager: StationManager
@@ -66,6 +70,7 @@ class AddressSearchViewController: UITableViewController, UISearchResultsUpdatin
   let searchController = UISearchController(searchResultsController: nil)
   var stationManager: StationManager?
   var stationDataSource: StationDataSource?
+  weak var delegate: AddressSearchViewControllerDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -92,10 +97,6 @@ class AddressSearchViewController: UITableViewController, UISearchResultsUpdatin
   }
 
   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let station = self.stationManager?.stations[indexPath.row]
-    let mapViewController = MapViewController()
-    mapViewController.selectedStation = station
-    mapViewController.stationManager = self.stationManager
-    self.navigationController?.pushViewController(mapViewController, animated: true)
+    self.delegate?.addressSearchViewController(self, didSelectRowAt: indexPath)
   }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapAndAddressViewController: UIViewController {
+class MapAndAddressViewController: UIViewController, AddressSearchViewControllerDelegate {
 
   var stationManager: StationManager?
   
@@ -20,8 +20,10 @@ class MapAndAddressViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     self.mapViewController.stationManager = self.stationManager
     self.addressSeachViewController.stationManager = self.stationManager
+    self.addressSeachViewController.delegate = self
     
     self.addChildViewController(self.mapViewController)
     self.mapViewController.didMove(toParentViewController: self)
@@ -35,5 +37,12 @@ class MapAndAddressViewController: UIViewController {
     self.addressSeachViewController.view.frame = self.addressView.bounds
     
     self.navigationItem.title = "Where To?"
+  }
+  
+  func addressSearchViewController(_ addressSearchViewController: AddressSearchViewController, didSelectRowAt indexPath: IndexPath) -> Void {
+    let station = self.stationManager?.stations[indexPath.row]
+    if let unwrappedStation = station {
+      self.mapViewController.selectedStation = unwrappedStation
+    }
   }
 }
