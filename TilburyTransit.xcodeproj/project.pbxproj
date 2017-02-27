@@ -25,6 +25,12 @@
 		7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationManager.swift */; };
+		7BAEB0901E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
+		7BAEB0911E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
+		7BAEB0921E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
+		7BAEB0931E63A82200F2D589 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */; };
+		7BAEB0941E63A82200F2D589 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */; };
+		7BAEB0951E63A82200F2D589 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */; };
 		7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */; };
 		7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762471E62192700DA2DB8 /* StationFeed.swift */; };
 		7BB7624A1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */; };
@@ -78,6 +84,8 @@
 		7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationInformationFeed.swift; path = Services/StationInformationFeed.swift; sourceTree = "<group>"; };
 		7B09712D1E5FFA9A007EF3AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		7B2774DE1E6209C700575F29 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
+		7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationTableViewCell.swift; path = UI/StationTableViewCell.swift; sourceTree = "<group>"; };
+		7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StationTableViewCell.xib; path = UI/StationTableViewCell.xib; sourceTree = "<group>"; };
 		7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationStatusFeed.swift; path = Services/StationStatusFeed.swift; sourceTree = "<group>"; };
 		7BB762471E62192700DA2DB8 /* StationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationFeed.swift; path = Services/StationFeed.swift; sourceTree = "<group>"; };
 		7BB762491E62282B00DA2DB8 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotation.swift; path = UI/StationAnnotation.swift; sourceTree = "<group>"; };
@@ -188,6 +196,8 @@
 				7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */,
 				7BB7625D1E63835300DA2DB8 /* MapViewController.swift */,
 				7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */,
+				7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */,
+				7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -317,6 +327,7 @@
 			files = (
 				7B0971011E5FF589007EF3AC /* LaunchScreen.storyboard in Resources */,
 				7B0970FE1E5FF589007EF3AC /* Assets.xcassets in Resources */,
+				7BAEB0931E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 				7B0970FC1E5FF589007EF3AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAEB0941E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAEB0951E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +365,7 @@
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7625E1E63835300DA2DB8 /* MapViewController.swift in Sources */,
 				7BB762461E6218E800DA2DB8 /* StationStatusFeed.swift in Sources */,
+				7BAEB0901E63A82200F2D589 /* StationTableViewCell.swift in Sources */,
 				7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */,
 				7B0970F71E5FF589007EF3AC /* SplashViewController.swift in Sources */,
 				7B09712E1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
@@ -367,6 +381,7 @@
 				7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BAEB0911E63A82200F2D589 /* StationTableViewCell.swift in Sources */,
 				7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 				7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */,
@@ -382,6 +397,7 @@
 				7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BAEB0921E63A82200F2D589 /* StationTableViewCell.swift in Sources */,
 				7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,
 				7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */,

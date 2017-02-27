@@ -22,7 +22,11 @@ class StationManager: NSObject, StationDataManager {
   internal var stations: [Station] = []
   private var stationInformationByStationID: Dictionary<String, StationInformation> = [:]
   private var stationStatusByStationID: Dictionary<String, StationStatus> = [:]
-  weak var delegate: StationDataManagerDelegate?
+  var delegates: [StationDataManagerDelegate] = []
+  
+  public func registerDelegate(delegate: StationDataManagerDelegate) -> Void {
+    delegates.append(delegate)
+  }
   
   internal func reloadStations() {
     self.fetchStationInformation()
@@ -71,6 +75,8 @@ class StationManager: NSObject, StationDataManager {
       }
     }
     self.stations = newStations
-    self.delegate?.stationsWereUpdated(stations: newStations)
+    self.delegates.forEach { (delegate) in
+      delegate.stationsWereUpdated(stations: self.stations)
+    }
   }
 }

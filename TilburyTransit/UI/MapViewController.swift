@@ -16,18 +16,47 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   var locationManager = CLLocationManager()
   var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
-  var stationManager = StationManager()
+  var stationManager: StationManager?
+  var selectedStation: Station?
+  
+  var center: CLLocationCoordinate2D {
+    get {
+      if self.selectedStation != nil {
+        return CLLocationCoordinate2D(
+          latitude: (self.selectedStation?.latitude)!,
+          longitude: (self.selectedStation?.longitude)!
+        )
+      } else if self.currentLocationCoordinate() != nil {
+        return self.currentLocationCoordinate()!
+      } else {
+        return self.defaultCoordinate()
+      }
+    }
+  }
+
+  
+  public required init?(coder aDecoder: NSCoder) {
+    super.init(coder:aDecoder)
+  }
+  
+  public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.stationManager.delegate = self
-//    self.stationManager.reloadStations()
+    self.stationManager?.registerDelegate(delegate: self)
+    if let unwrappedManager = self.stationManager {
+      if !unwrappedManager.stations.isEmpty {
+        self.updateMapViewForStations(stations: unwrappedManager.stations)
+      }
+    }
     self.setupMKMapView()
     self.locationManager.requestWhenInUseAuthorization()
   }
   
   func stationsWereUpdated(stations: [Station]) {
-    self.stationsUpdated(stations: stations)
+    self.updateMapViewForStations(stations: stations)
   }
   
   public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -75,7 +104,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
     self.mapView?.delegate = self
   }
   
-  func stationsUpdated(stations: [Station]) -> Void {
+  func updateMapViewForStations(stations: [Station]) -> Void {
     let annotations = stations.map { (station) -> StationAnnotation in
       let annotation = StationAnnotation(station: station)
       return annotation
@@ -90,7 +119,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
 
   func updateMapCenter() -> Void {
     let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-    let centerCoordinate = self.currentLocationCoordinate() ?? self.defaultCoordinate()
+    let centerCoordinate = self.center
     self.coordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
     self.mapView?.setRegion(self.coordinateRegion!, animated: true)
     self.mapView?.regionThatFits(self.coordinateRegion!)
