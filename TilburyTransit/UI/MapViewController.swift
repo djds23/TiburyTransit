@@ -33,7 +33,6 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
       }
     }
   }
-
   
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder:aDecoder)
@@ -116,10 +115,6 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
     self.mapView?.addAnnotations(annotations)
     self.updateMapCenter()
   }
-  
-  public func updateSearchResults(for searchController: UISearchController) {
-    
-  }
 
   func updateMapCenter() -> Void {
     let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
@@ -136,9 +131,12 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
         if let stationAnnotation = annotation as? StationAnnotation {
           if (stationAnnotation.station == selected) {
             self.mapView?.selectAnnotation(stationAnnotation, animated: true)
+            self.navigationItem.title = selected.name
           }
         }
       })
+    } else {
+      self.navigationItem.title = "Stations"
     }
   }
   

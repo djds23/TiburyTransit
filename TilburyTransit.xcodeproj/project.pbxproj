@@ -43,6 +43,12 @@
 		7BB7625E1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
 		7BB7625F1E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
 		7BB762601E63835300DA2DB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7625D1E63835300DA2DB8 /* MapViewController.swift */; };
+		7BEA49F41E63D54500B06E54 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */; };
+		7BEA49F51E63D54500B06E54 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */; };
+		7BEA49F61E63D54500B06E54 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */; };
+		7BEA49F71E63D54500B06E54 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */; };
+		7BEA49F81E63D54500B06E54 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */; };
+		7BEA49F91E63D54500B06E54 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */; };
 		7BF18B5B1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
 		7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
 		7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
@@ -92,6 +98,8 @@
 		7BB7624E1E6229B400DA2DB8 /* StationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationAnnotationView.swift; path = UI/StationAnnotationView.swift; sourceTree = "<group>"; };
 		7BB762571E63369900DA2DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7BB7625D1E63835300DA2DB8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = UI/MapViewController.swift; sourceTree = "<group>"; };
+		7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = UI/MainTabBarViewController.swift; sourceTree = "<group>"; };
+		7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = UI/MainTabBarViewController.xib; sourceTree = "<group>"; };
 		7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressSearchViewController.swift; path = UI/AddressSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +206,8 @@
 				7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */,
 				7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */,
 				7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */,
+				7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */,
+				7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -326,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0971011E5FF589007EF3AC /* LaunchScreen.storyboard in Resources */,
+				7BEA49F71E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 				7B0970FE1E5FF589007EF3AC /* Assets.xcassets in Resources */,
 				7BAEB0931E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 				7B0970FC1E5FF589007EF3AC /* Main.storyboard in Resources */,
@@ -337,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAEB0941E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
+				7BEA49F81E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAEB0951E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
+				7BEA49F91E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEA49F41E63D54500B06E54 /* MainTabBarViewController.swift in Sources */,
 				7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */,
 				7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */,
 				7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
@@ -381,6 +395,7 @@
 				7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971261E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624B1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BEA49F51E63D54500B06E54 /* MainTabBarViewController.swift in Sources */,
 				7BAEB0911E63A82200F2D589 /* StationTableViewCell.swift in Sources */,
 				7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */,
@@ -397,6 +412,7 @@
 				7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7B0971271E5FF911007EF3AC /* Station.swift in Sources */,
 				7BB7624C1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
+				7BEA49F61E63D54500B06E54 /* MainTabBarViewController.swift in Sources */,
 				7BAEB0921E63A82200F2D589 /* StationTableViewCell.swift in Sources */,
 				7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */,
 				7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */,

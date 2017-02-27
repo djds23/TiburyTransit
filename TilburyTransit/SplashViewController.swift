@@ -13,6 +13,9 @@ class SplashViewController: UINavigationController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let searchController = AddressSearchViewController()
+    if let tabBarController = self.tabBarController as? MainTabBarViewController {
+      searchController.stationManager = tabBarController.stationManager
+    }
     self.pushViewController(searchController, animated: true)
   }
   

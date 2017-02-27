@@ -32,11 +32,7 @@ class StationDataSource: NSObject, UITableViewDataSource, StationDataManagerDele
     cell.station = station
     return cell
   }
-  
-  public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Stations"
-  }
-  
+
   @nonobjc public func tableView(_ tableView: UITableView, filterWithSearchController: UISearchController?) -> Void {
     defer {
       tableView.reloadData()
@@ -68,18 +64,21 @@ class StationDataSource: NSObject, UITableViewDataSource, StationDataManagerDele
 class AddressSearchViewController: UITableViewController, UISearchResultsUpdating, StationDataManagerDelegate {
 
   let searchController = UISearchController(searchResultsController: nil)
-  let stationManager = StationManager()
+  var stationManager: StationManager?
   var stationDataSource: StationDataSource?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.stationDataSource = StationDataSource(stationManager: self.stationManager)
+    if let unwrappedManager = self.stationManager {
+      self.stationDataSource = StationDataSource(stationManager: unwrappedManager)
+    }
     self.tableView.dataSource = self.stationDataSource
-    self.navigationItem.title = "BikeShare Stations"
-    self.stationManager.registerDelegate(delegate: self)
-    self.stationManager.reloadStations()
+    self.navigationItem.title = "Stations"
+    self.stationManager?.registerDelegate(delegate: self)
+    self.stationManager?.reloadStations()
     self.searchController.searchResultsUpdater = self
     self.searchController.dimsBackgroundDuringPresentation = false
+    self.searchController.hidesNavigationBarDuringPresentation = false
     self.definesPresentationContext = true
     self.tableView.tableHeaderView = self.searchController.searchBar
   }
@@ -98,7 +97,7 @@ class AddressSearchViewController: UITableViewController, UISearchResultsUpdatin
   }
 
   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let station = self.stationManager.stations[indexPath.row]
+    let station = self.stationManager?.stations[indexPath.row]
     let mapViewController = MapViewController()
     mapViewController.selectedStation = station
     mapViewController.stationManager = self.stationManager
