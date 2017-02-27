@@ -25,6 +25,12 @@
 		7B09712F1E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B0971301E5FFA9A007EF3AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B09712D1E5FFA9A007EF3AC /* APIClient.swift */; };
 		7B2774DF1E6209C700575F29 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2774DE1E6209C700575F29 /* StationManager.swift */; };
+		7B9A16B51E63E0650047B29D /* MapAndAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A16B31E63E0650047B29D /* MapAndAddressViewController.swift */; };
+		7B9A16B61E63E0650047B29D /* MapAndAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A16B31E63E0650047B29D /* MapAndAddressViewController.swift */; };
+		7B9A16B71E63E0650047B29D /* MapAndAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A16B31E63E0650047B29D /* MapAndAddressViewController.swift */; };
+		7B9A16B81E63E0650047B29D /* MapAndAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9A16B41E63E0650047B29D /* MapAndAddressViewController.xib */; };
+		7B9A16B91E63E0650047B29D /* MapAndAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9A16B41E63E0650047B29D /* MapAndAddressViewController.xib */; };
+		7B9A16BA1E63E0650047B29D /* MapAndAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9A16B41E63E0650047B29D /* MapAndAddressViewController.xib */; };
 		7BAEB0901E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
 		7BAEB0911E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
 		7BAEB0921E63A82200F2D589 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */; };
@@ -90,6 +96,8 @@
 		7B0971291E5FF978007EF3AC /* StationInformationFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationInformationFeed.swift; path = Services/StationInformationFeed.swift; sourceTree = "<group>"; };
 		7B09712D1E5FFA9A007EF3AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		7B2774DE1E6209C700575F29 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
+		7B9A16B31E63E0650047B29D /* MapAndAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapAndAddressViewController.swift; path = UI/MapAndAddressViewController.swift; sourceTree = "<group>"; };
+		7B9A16B41E63E0650047B29D /* MapAndAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapAndAddressViewController.xib; path = UI/MapAndAddressViewController.xib; sourceTree = "<group>"; };
 		7BAEB08E1E63A82200F2D589 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationTableViewCell.swift; path = UI/StationTableViewCell.swift; sourceTree = "<group>"; };
 		7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StationTableViewCell.xib; path = UI/StationTableViewCell.xib; sourceTree = "<group>"; };
 		7BB762451E6218E800DA2DB8 /* StationStatusFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationStatusFeed.swift; path = Services/StationStatusFeed.swift; sourceTree = "<group>"; };
@@ -208,6 +216,8 @@
 				7BAEB08F1E63A82200F2D589 /* StationTableViewCell.xib */,
 				7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */,
 				7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */,
+				7B9A16B31E63E0650047B29D /* MapAndAddressViewController.swift */,
+				7B9A16B41E63E0650047B29D /* MapAndAddressViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -335,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A16B81E63E0650047B29D /* MapAndAddressViewController.xib in Resources */,
 				7B0971011E5FF589007EF3AC /* LaunchScreen.storyboard in Resources */,
 				7BEA49F71E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 				7B0970FE1E5FF589007EF3AC /* Assets.xcassets in Resources */,
@@ -347,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A16B91E63E0650047B29D /* MapAndAddressViewController.xib in Resources */,
 				7BAEB0941E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 				7BEA49F81E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 			);
@@ -356,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A16BA1E63E0650047B29D /* MapAndAddressViewController.xib in Resources */,
 				7BAEB0951E63A82200F2D589 /* StationTableViewCell.xib in Resources */,
 				7BEA49F91E63D54500B06E54 /* MainTabBarViewController.xib in Resources */,
 			);
@@ -374,6 +387,7 @@
 				7B09712A1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7BB7624A1E62282B00DA2DB8 /* StationAnnotation.swift in Sources */,
 				7BF18B5B1E639328000B115A /* AddressSearchViewController.swift in Sources */,
+				7B9A16B51E63E0650047B29D /* MapAndAddressViewController.swift in Sources */,
 				7BB7624F1E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
 				7BB762481E62192700DA2DB8 /* StationFeed.swift in Sources */,
 				7B0971251E5FF911007EF3AC /* Station.swift in Sources */,
@@ -390,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A16B61E63E0650047B29D /* MapAndAddressViewController.swift in Sources */,
 				7B09710C1E5FF589007EF3AC /* TilburyTransitTests.swift in Sources */,
 				7B09712B1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7BB762501E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,
@@ -407,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A16B71E63E0650047B29D /* MapAndAddressViewController.swift in Sources */,
 				7B0971171E5FF589007EF3AC /* TilburyTransitUITests.swift in Sources */,
 				7B09712C1E5FF978007EF3AC /* StationInformationFeed.swift in Sources */,
 				7BB762511E6229B400DA2DB8 /* StationAnnotationView.swift in Sources */,

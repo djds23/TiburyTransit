@@ -91,11 +91,6 @@ class AddressSearchViewController: UITableViewController, UISearchResultsUpdatin
     self.tableView.reloadData()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let station = self.stationManager?.stations[indexPath.row]
     let mapViewController = MapViewController()
