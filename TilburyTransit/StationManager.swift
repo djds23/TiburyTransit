@@ -19,16 +19,17 @@ protocol StationDataManagerDelegate: class {
 
 class StationManager: NSObject, StationDataManager {
   
-  internal var stations: [Station] = []
+  var stations: [Station] = []
+  var delegates: [StationDataManagerDelegate] = []
+  
   private var stationInformationByStationID: Dictionary<String, StationInformation> = [:]
   private var stationStatusByStationID: Dictionary<String, StationStatus> = [:]
-  var delegates: [StationDataManagerDelegate] = []
   
   public func registerDelegate(delegate: StationDataManagerDelegate) -> Void {
     delegates.append(delegate)
   }
   
-  internal func reloadStations() {
+  public func reloadStations() {
     self.fetchStationInformation()
     self.fetchStationStatus()
   }

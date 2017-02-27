@@ -12,12 +12,12 @@ class SplashViewController: UINavigationController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let searchController = MapAndAddressViewController()
-    if let tabBarController = self.tabBarController as? MainTabBarViewController {
-      searchController.stationManager = tabBarController.stationManager
+    let mapViewController = MapViewController()
+    if let tabBarController = self.tabBarController as? MainTabBarViewController { 
+      mapViewController.stationManager = tabBarController.stationManager
+      mapViewController.stationManager?.reloadStations()
     }
-    
-    self.pushViewController(searchController, animated: true)
+    self.pushViewController(mapViewController, animated: true)
   }
   
 }

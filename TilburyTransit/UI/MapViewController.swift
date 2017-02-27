@@ -16,7 +16,19 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   var locationManager = CLLocationManager()
   var coordinateRegion: MKCoordinateRegion?
   var mapView: MKMapView?
-  var stationManager: StationManager?
+  
+  var stationManager: StationManager?  {
+    get {
+      return self._stationManager
+    }
+    set(newStationManager) {
+      self._stationManager = newStationManager
+      self._stationManager?.registerDelegate(delegate: self)
+    }
+  }
+  
+  private var _stationManager: StationManager?
+  
   var selectedStation: Station? {
     get {
       return self._selectedStation
@@ -56,7 +68,6 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
     super.viewDidLoad()
     self.setupMKMapView()
     self.locationManager.requestWhenInUseAuthorization()
-    self.stationManager?.registerDelegate(delegate: self)
     if let unwrappedManager = self.stationManager {
       if !unwrappedManager.stations.isEmpty {
         self.updateMapViewForStations(stations: unwrappedManager.stations)
@@ -92,7 +103,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   }
   
   public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-    print("view was selected")
+    // delegate this to owner
   }
   
   override func viewDidAppear(_ animated: Bool) {

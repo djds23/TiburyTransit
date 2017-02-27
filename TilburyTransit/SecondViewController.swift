@@ -12,11 +12,12 @@ class SecondViewController: UINavigationController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let mapViewController = MapViewController()
+    let searchController = MapAndAddressViewController()
     if let tabBarController = self.tabBarController as? MainTabBarViewController {
-      mapViewController.stationManager = tabBarController.stationManager
+      searchController.stationManager = tabBarController.stationManager
     }
-    self.pushViewController(mapViewController, animated: true)
+    
+    self.pushViewController(searchController, animated: true)
   }
   
 }
