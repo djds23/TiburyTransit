@@ -1,0 +1,6 @@
+framework module Pods_TilburyTransitTests {
+  umbrella header "Pods-TilburyTransitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

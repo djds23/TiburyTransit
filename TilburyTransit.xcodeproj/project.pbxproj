@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DEA65B66053277EBEAFA410 /* Pods_TilburyTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC324185DBA4F5F2A6FFE9F /* Pods_TilburyTransit.framework */; };
+		78387014C1C56BDC4C0D62B6 /* Pods_TilburyTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188BFA0673516FE99E733D2 /* Pods_TilburyTransitTests.framework */; };
 		7B0970F51E5FF589007EF3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F41E5FF589007EF3AC /* AppDelegate.swift */; };
 		7B0970F71E5FF589007EF3AC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F61E5FF589007EF3AC /* SplashViewController.swift */; };
 		7B0970F91E5FF589007EF3AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0970F81E5FF589007EF3AC /* SecondViewController.swift */; };
@@ -58,6 +60,7 @@
 		7BF18B5B1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
 		7BF18B5C1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
 		7BF18B5D1E639328000B115A /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */; };
+		94F77B11CBFD11E4A69F742E /* Pods_TilburyTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6BB2B4E34EAB3C72556FB9 /* Pods_TilburyTransitUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		064E6E0A99DA39047B8A9F0D /* Pods-TilburyTransitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransitUITests/Pods-TilburyTransitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4AEDDC804336061A9E9C85FC /* Pods-TilburyTransitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransitTests/Pods-TilburyTransitTests.release.xcconfig"; sourceTree = "<group>"; };
+		5188BFA0673516FE99E733D2 /* Pods_TilburyTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TilburyTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0970F11E5FF589007EF3AC /* TilburyTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TilburyTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0970F41E5FF589007EF3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B0970F61E5FF589007EF3AC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,12 @@
 		7BEA49F21E63D54500B06E54 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = UI/MainTabBarViewController.swift; sourceTree = "<group>"; };
 		7BEA49F31E63D54500B06E54 /* MainTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = UI/MainTabBarViewController.xib; sourceTree = "<group>"; };
 		7BF18B5A1E639328000B115A /* AddressSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressSearchViewController.swift; path = UI/AddressSearchViewController.swift; sourceTree = "<group>"; };
+		8265BB5E30A8CC469641298B /* Pods-TilburyTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransit/Pods-TilburyTransit.debug.xcconfig"; sourceTree = "<group>"; };
+		CF4DBC8601200CA2F75B9670 /* Pods-TilburyTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransit/Pods-TilburyTransit.release.xcconfig"; sourceTree = "<group>"; };
+		CFC324185DBA4F5F2A6FFE9F /* Pods_TilburyTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TilburyTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10F04B250DE5441E410C8FC /* Pods-TilburyTransitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransitUITests/Pods-TilburyTransitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9F0F054D8D7AFF465A0FFC4 /* Pods-TilburyTransitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TilburyTransitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TilburyTransitTests/Pods-TilburyTransitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF6BB2B4E34EAB3C72556FB9 /* Pods_TilburyTransitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TilburyTransitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB762581E63369900DA2DB8 /* MapKit.framework in Frameworks */,
+				3DEA65B66053277EBEAFA410 /* Pods_TilburyTransit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78387014C1C56BDC4C0D62B6 /* Pods_TilburyTransitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F77B11CBFD11E4A69F742E /* Pods_TilburyTransitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +160,7 @@
 				7B0971151E5FF589007EF3AC /* TilburyTransitUITests */,
 				7B0970F21E5FF589007EF3AC /* Products */,
 				7BB762561E63369900DA2DB8 /* Frameworks */,
+				C5C4A46C49BA445A8726CE53 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,8 +242,24 @@
 			isa = PBXGroup;
 			children = (
 				7BB762571E63369900DA2DB8 /* MapKit.framework */,
+				CFC324185DBA4F5F2A6FFE9F /* Pods_TilburyTransit.framework */,
+				5188BFA0673516FE99E733D2 /* Pods_TilburyTransitTests.framework */,
+				EF6BB2B4E34EAB3C72556FB9 /* Pods_TilburyTransitUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5C4A46C49BA445A8726CE53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8265BB5E30A8CC469641298B /* Pods-TilburyTransit.debug.xcconfig */,
+				CF4DBC8601200CA2F75B9670 /* Pods-TilburyTransit.release.xcconfig */,
+				E9F0F054D8D7AFF465A0FFC4 /* Pods-TilburyTransitTests.debug.xcconfig */,
+				4AEDDC804336061A9E9C85FC /* Pods-TilburyTransitTests.release.xcconfig */,
+				E10F04B250DE5441E410C8FC /* Pods-TilburyTransitUITests.debug.xcconfig */,
+				064E6E0A99DA39047B8A9F0D /* Pods-TilburyTransitUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B09711B1E5FF589007EF3AC /* Build configuration list for PBXNativeTarget "TilburyTransit" */;
 			buildPhases = (
+				24CCAACAFCB3C6C40EDD4F03 /* [CP] Check Pods Manifest.lock */,
 				7B0970ED1E5FF589007EF3AC /* Sources */,
 				7B0970EE1E5FF589007EF3AC /* Frameworks */,
 				7B0970EF1E5FF589007EF3AC /* Resources */,
+				DF401F6DAF7E9253FC37E934 /* [CP] Embed Pods Frameworks */,
+				1C34876F57D865C970F1753C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B09711E1E5FF589007EF3AC /* Build configuration list for PBXNativeTarget "TilburyTransitTests" */;
 			buildPhases = (
+				59A7CAC6239C73DE2DED331C /* [CP] Check Pods Manifest.lock */,
 				7B0971031E5FF589007EF3AC /* Sources */,
 				7B0971041E5FF589007EF3AC /* Frameworks */,
 				7B0971051E5FF589007EF3AC /* Resources */,
+				108F163E69E5D3A45FC60A08 /* [CP] Embed Pods Frameworks */,
+				8DD83E66CB33BB09E9209895 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B0971211E5FF589007EF3AC /* Build configuration list for PBXNativeTarget "TilburyTransitUITests" */;
 			buildPhases = (
+				0386C7F8AB1708383DAC5F0E /* [CP] Check Pods Manifest.lock */,
 				7B09710E1E5FF589007EF3AC /* Sources */,
 				7B09710F1E5FF589007EF3AC /* Frameworks */,
 				7B0971101E5FF589007EF3AC /* Resources */,
+				8D93EED4B42D05D261E93F69 /* [CP] Embed Pods Frameworks */,
+				E93F394AB3CC1681E4002786 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,6 +416,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0386C7F8AB1708383DAC5F0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		108F163E69E5D3A45FC60A08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransitTests/Pods-TilburyTransitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C34876F57D865C970F1753C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransit/Pods-TilburyTransit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24CCAACAFCB3C6C40EDD4F03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59A7CAC6239C73DE2DED331C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D93EED4B42D05D261E93F69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransitUITests/Pods-TilburyTransitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DD83E66CB33BB09E9209895 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransitTests/Pods-TilburyTransitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF401F6DAF7E9253FC37E934 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransit/Pods-TilburyTransit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93F394AB3CC1681E4002786 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TilburyTransitUITests/Pods-TilburyTransitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B0970ED1E5FF589007EF3AC /* Sources */ = {
@@ -568,6 +747,7 @@
 		};
 		7B09711C1E5FF589007EF3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8265BB5E30A8CC469641298B /* Pods-TilburyTransit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNGV5PHUG;
@@ -581,6 +761,7 @@
 		};
 		7B09711D1E5FF589007EF3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF4DBC8601200CA2F75B9670 /* Pods-TilburyTransit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNGV5PHUG;
@@ -594,6 +775,7 @@
 		};
 		7B09711F1E5FF589007EF3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F0F054D8D7AFF465A0FFC4 /* Pods-TilburyTransitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -609,6 +791,7 @@
 		};
 		7B0971201E5FF589007EF3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AEDDC804336061A9E9C85FC /* Pods-TilburyTransitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +807,7 @@
 		};
 		7B0971221E5FF589007EF3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10F04B250DE5441E410C8FC /* Pods-TilburyTransitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = NRNGV5PHUG;
@@ -638,6 +822,7 @@
 		};
 		7B0971231E5FF589007EF3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 064E6E0A99DA39047B8A9F0D /* Pods-TilburyTransitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = NRNGV5PHUG;
