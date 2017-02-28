@@ -15,9 +15,9 @@ protocol AddressSearchViewControllerDelegate: class {
 
 class StationDataSource: NSObject, UITableViewDataSource, StationDataManagerDelegate {
   
+  var validStations: [Station]
   private var stationManager: StationManager
-  private var validStations: [Station]
-  
+
   public init(stationManager: StationManager) {
     self.stationManager = stationManager
     self.validStations = stationManager.stations

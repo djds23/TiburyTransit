@@ -12,6 +12,7 @@ class MapAndAddressViewController: UIViewController, AddressSearchViewController
 
   var stationManager: StationManager?
   
+  @IBOutlet weak var addressHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var mapView: UIView!
   @IBOutlet weak var addressView: UIView!
   
@@ -40,7 +41,7 @@ class MapAndAddressViewController: UIViewController, AddressSearchViewController
   }
   
   func addressSearchViewController(_ addressSearchViewController: AddressSearchViewController, didSelectRowAt indexPath: IndexPath) -> Void {
-    let station = self.stationManager?.stations[indexPath.row]
+    let station = addressSearchViewController.stationDataSource?.validStations[indexPath.row]
     if let unwrappedStation = station {
       self.mapViewController.selectedStation = unwrappedStation
     }

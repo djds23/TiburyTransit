@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapAndAddressViewController" customModule="TilburyTransit" customModuleProvider="target">
             <connections>
+                <outlet property="addressHeightConstraint" destination="Ggw-kR-MLU" id="J2J-cH-jQG"/>
                 <outlet property="addressView" destination="uFY-8a-5Um" id="ZCb-IC-syF"/>
                 <outlet property="mapView" destination="np2-9u-jMQ" id="JLz-jI-teJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,15 +23,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np2-9u-jMQ" userLabel="mapView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="gKx-RV-gQK"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFY-8a-5Um" userLabel="addressView">
-                    <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                    <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                     <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Ggw-kR-MLU"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

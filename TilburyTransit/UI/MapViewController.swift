@@ -35,7 +35,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
     }
     set(newStation) {
       self._selectedStation = newStation
-      self.openSelectedStation()
+      self.updateMapCenter()
     }
   }
   
@@ -138,7 +138,7 @@ class MapViewController: UIViewController, StationDataManagerDelegate, MKMapView
   }
 
   func updateMapCenter() -> Void {
-    let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+    let span = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
     let centerCoordinate = self.center
     self.coordinateRegion = MKCoordinateRegion(center: centerCoordinate, span: span)
     self.mapView?.setRegion(self.coordinateRegion!, animated: true)
